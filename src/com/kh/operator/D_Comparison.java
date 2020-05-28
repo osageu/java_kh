@@ -29,5 +29,7 @@ public class D_Comparison {
 		System.out.println("a는 홀수인가 : " + !(a % 2== 0));
 		System.out.println("a는 홀수인가 : " + (a % 2 != 0));
 		System.out.println("a는 홀수인가 : " + (a % 2 == 1));
+		
+		
 	}
 }
