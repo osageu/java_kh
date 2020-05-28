@@ -4,7 +4,7 @@ public class Run {
 	
 	public static void main(String[] args) {
 		E_Logical osageu = new E_Logical();
-		osageu.method2();
+		osageu.method3();
 	}
 	
 }
