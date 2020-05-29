@@ -159,15 +159,13 @@ public class OperatorPractice {
 		System.out.print("C 사원의 연봉 : ");
 		double inputC = osageu.nextDouble();
 
-		double A = 1.4 * inputA;
-		double B = 1 * inputB;
-		double C = 1.15 * inputC;
-		double D[ ] = {A, B, C};
+		double A[ ] = {1.4*inputA, 1*inputB, 1.15*inputC};
+		char B[ ] = {'A', 'B', 'C'};
 		
 		System.out.println();
-		System.out.println("A사원의 인센티브포함 연봉 : " + A + "\n" + (A >= 3000 ? "3000이상" : "3000미만"));
-		System.out.println("B사원의 인센티브포함 연봉 : " + B + "\n" + (B >= 3000 ? "3000이상" : "3000미만"));
-		System.out.println("C사원의 인센티브포함 연봉 : " + C + "\n" + (C >= 3000 ? "3000이상" : "3000미만"));
+		System.out.println(B[0] + "사원의 인센티브포함 연봉 : " + A[0] + "\n" + (A[0] >= 3000 ? "3000이상" : "3000미만"));
+		System.out.println(B[1] + "사원의 인센티브포함 연봉 : " + A[1] + "\n" + (A[1] >= 3000 ? "3000이상" : "3000미만"));
+		System.out.println(B[2] + "사원의 인센티브포함 연봉 : " + A[2] + "\n" + (A[2] >= 3000 ? "3000이상" : "3000미만"));
 		
 	}
 
