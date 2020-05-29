@@ -4,7 +4,7 @@ public class Run {
 	
 	public static void main(String[] args) {
 		G_Triple osageu = new G_Triple();
-		osageu.method2();
+		osageu.method6();
 	}
 	
 }
