@@ -2,7 +2,7 @@ package com.kh.operator;
 
 public class C_Arithmetic {
 	public void method1() {
-		// 연산 순서 ; * -- / -- % -- > -- + -- - 
+		// 연산 순서 ; '*' -- '/' -- '%' -- '>' -- '+' -- '-' 
 		
 		int  a= 5; // a5 
 		int  b= 10; // a5 b10
