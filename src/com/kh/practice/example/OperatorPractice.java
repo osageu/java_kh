@@ -3,8 +3,9 @@ package com.kh.practice.example;
 import java.util.Scanner;
 
 public class OperatorPractice {
+	Scanner osageu = new Scanner(System.in);
+	
 	public void practice1() {
-		Scanner osageu = new Scanner(System.in);
 		System.out.print("정수 : ");
 		int input = osageu.nextInt();
 		System.out.println();
@@ -12,7 +13,7 @@ public class OperatorPractice {
 	}
 	
 	public void practice2() {
-		Scanner osageu = new Scanner(System.in);
+		 
 		System.out.print("정수 : ");
 		int input = osageu.nextInt();
 		System.out.println();
@@ -20,7 +21,7 @@ public class OperatorPractice {
 	}
 	
 	public void practice3() {
-		Scanner osageu = new Scanner(System.in);
+		 
 		System.out.print("정수 : ");
 		int input = osageu.nextInt();
 		System.out.println();
@@ -28,7 +29,7 @@ public class OperatorPractice {
 	}
 	
 	public void practice4() {
-		Scanner osageu = new Scanner(System.in);
+		 
 		System.out.print("인원 수 : ");
 		int input1 = osageu.nextInt();
 		
@@ -41,7 +42,7 @@ public class OperatorPractice {
 	}
 	
 	public void practice5() {
-		Scanner osageu = new Scanner(System.in);
+		 
 		System.out.print("이름 : ");
 		String name = osageu.nextLine();
 		
@@ -70,7 +71,7 @@ public class OperatorPractice {
 	}
 	
 	public void practice6() {
-		Scanner osageu = new Scanner(System.in);
+		 
 		System.out.print("나이 : ");
 		int input = osageu.nextInt();
 		
@@ -79,7 +80,7 @@ public class OperatorPractice {
 	}
 	
 	public void practice7() {
-		Scanner osageu = new Scanner(System.in);
+		 
 		System.out.print("국어 : ");
 		int korean = osageu.nextInt();
 		
@@ -106,7 +107,6 @@ public class OperatorPractice {
 	}
 	
 	public void practice8() {
-		Scanner osageu = new Scanner(System.in);
 		System.out.print("주민번호를 입력하세요(- 포함) : ");
 		char input = osageu.nextLine().charAt(7);
 		
@@ -115,7 +115,7 @@ public class OperatorPractice {
 	}
 	
 	public void practice9() {
-		Scanner osageu = new Scanner(System.in);
+		 
 		System.out.print("정수1 : ");
 		int num1 = osageu.nextInt();
 		
@@ -131,7 +131,7 @@ public class OperatorPractice {
 	}
 	
 	public void practice10() {
-		Scanner osageu = new Scanner(System.in);
+		 
 		System.out.print("입력1 : ");
 		int input1 = osageu.nextInt();
 		
@@ -148,7 +148,7 @@ public class OperatorPractice {
 	}
 	
 	public void practice11() {
-		Scanner osageu = new Scanner(System.in);
+		 
 		System.out.print("A 사원의 연봉 : ");
 		double inputA = osageu.nextDouble();
 		
@@ -157,7 +157,8 @@ public class OperatorPractice {
 		osageu.nextLine();
 
 		System.out.print("C 사원의 연봉 : ");
-		double inputC = osageu.nextDouble();
+//		double inputC = osageu.nextDouble();
+		int inputC = osageu.nextInt();
 
 		double A[ ] = {1.4*inputA, 1*inputB, 1.15*inputC};
 		char B[ ] = {'A', 'B', 'C'};
