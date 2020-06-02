@@ -208,6 +208,17 @@ public class B_Else {
 			}
 		System.out.println(season);
 	}
+	
+	public void method8() {
+		System.out.print("이름 : ");
+		String name = osageu.nextLine();
+		
+		if (name.equals("오장석")) {
+			System.out.println("본인입니다.");
+		} else if(!name.equals("오장석")) {
+			System.out.println("본인이 아닙니다.");
+		}
+	}
 }
 
 

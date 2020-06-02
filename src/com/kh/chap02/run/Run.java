@@ -1,19 +1,23 @@
-package com.kh.chap01.run;
-import com.kh.chap01.condition.*;
+package com.kh.chap02.run;
+import com.kh.chap02.loop.*;
+/**
+ * @author user1
+ *
+ */
 public class Run {
 
 	public static void main(String[] args) {
-//		A_If osageu = new A_If();
-//		B_Else osageu = new B_Else();
-		C_Switch osageu = new C_Switch();
+		A_For osageu = new A_For();
 //		osageu.method1();
 //		osageu.method2();
 //		osageu.method3();
-		osageu.method4();
+//		osageu.method4();
 //		osageu.method5();
 //		osageu.method6();
 //		osageu.method7();
 //		osageu.method8();
+		osageu.method9();
+//		osageu.method10();
 	}
 
 }
