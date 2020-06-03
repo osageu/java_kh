@@ -1,10 +1,11 @@
 package com.kh.chap02.loop;
 
+
 import java.util.Random;
 import java.util.Scanner;
+
 /**
- * @author user1
- *
+ * @author osageu
  */
 public class A_For {
 	Scanner osageu = new Scanner(System.in);
@@ -164,16 +165,18 @@ public class A_For {
 	public void method9() {
 		// 5~584
 		double value = Math.random();
+		int value2 = (int)(value*10);
+		System.out.println(value2);
 		int ivalue = (int)(value * 579 + 5); // 0.00 ~ 0.99 ==> 0.00 ~ 579.99 ==> 5.00 ~ 584.99 ==> 5 ~ 584
 		System.out.println(ivalue);
 		for (int i = 1 ; i <= 584 ; i++) {
 			if(ivalue==583) {
 				System.out.println("yes");
 			} 
-		}
-		
+	
 		int aa = ran.nextInt(49) + 7;// 7~55 ==> nextInt(max - min + 1) + min
 		System.out.println(aa);
+		}
 	}
 	
 	public void method10(	) {
@@ -184,8 +187,132 @@ public class A_For {
 		// 2 x 4 = 8
 		// 2 x 5 = 10
 		for (int i = 1 ; i <= 9 ; i++) { // 1에서부터 9까지 1씩 증가하는 동안 반복 ==> 9번
-			System.out.println("2 x " + i + "= " + 2 * i);
+//			System.out.println("2 x " + i + "= " + 2 * i);
+			System.out.printf("2 x %d = %2d\n", i,i*2);
 		}
 	}
 	
+	public void method11() {
+		System.out.printf("구구단(2~9단) : ");
+		int input = osageu.nextInt();
+		
+		if (input >= 2 && input <= 9) { // 잘 입력했을 경우 --> 반복문을 통해 출력
+			for (int i = 1 ; i <=9 ; i++) {
+				System.out.printf("%d x %d = %2d\n", input, i, i*input);
+			}
+		} else { // 잘못 입력했을 경우 --> 오류문구
+			System.out.println("ERROR");
+		}
+	}
+	
+	public void method12() {
+		// 2~9사이의 랜덤단을 출력하기
+		int aa = ran.nextInt(8) + 2; 
+		if (aa >= 2 && aa <= 9) { // 잘 입력했을 경우 --> 반복문을 통해 출력
+			for (int i = 1 ; i <=9 ; i++) {
+				System.out.printf("%d x %d = %2d\n", aa, i, i*aa);
+			}
+		} else { // 잘못 입력했을 경우 --> 오류문구
+			System.out.println("ERROR");
+		}
+		
+		int random = (int)(Math.random() * 8 + 2); // 2.00 ~ 9.99 ==> 2 ~ 9
+	}
+	
+	public void method13() {
+		// 입력받은 문자을 각 index별 문자를 추출 후 출력
+		// apple로 입력받았다면 ==> str ==> a, p, p, l, e
+		System.out.print("단어 : ");
+		String str = osageu.nextLine();
+		System.out.println("str : " + str);
+		System.out.println("문자열의 길이 : " + str.length());
+		for (int i = 0 ; i <=str.length()-1 ; i++) { // 0에서 마지막 index까지 1씩 증가하는 동안 반복
+			System.out.println(str.charAt(i));
+		}
+	}
+	
+	public void method14() {
+		/*
+		 * 중첩 for문
+		 * 
+		 * for (초기식1 ; 조건식1 ; 증감식1) {
+		 * 	수행할 문장1;
+		 * 		for (초기식2 ; 조건식2 ; 증감식2) {
+		 * 			수행할 문장2;
+		 * 		}
+		 * 	수행할 문장3;
+		 * }
+		 */
+		
+		// 1 2 3 4 5
+		// 1 2 3 4 5
+		// 1 2 3 4 5
+		for (int i = 1 ; i <=3 ; i++) { // 안 쪽 for문을 3번 반복 ==> 행 3번 반복
+			for(int j = 1 ; j <=5 ; j++) { // 1~5까지 1씩 증가하는 동안 반복 ==> 열 5번 반복
+				System.out.print(j + " ");
+			}
+			System.out.println();
+		}
+	}
+	
+	public void method15() {
+		
+		// *****
+		// *****
+		// *****
+		for (int i = 0 ; i <= 2 ; i++) {
+			for (int j = 0 ; j <= 4 ; j++) {
+				System.out.print('*');
+			}
+			System.out.println();
+		}
+	}
+	
+	public void method16() {
+		// 0시 ~ 23시 59분
+		// 0시 1분
+		// 0시 2분
+		// ...
+		// ...
+		// 1시 0분
+		// ...
+		// ...
+		// 23시 0분
+		// 23시 1분
+		// ...
+		// ...
+		// 23시 59분
+		//
+		for (int hour = 0 ; hour <=23 ; hour++) {
+			for (int min = 0 ; min <=59 ; min++) {
+				System.out.printf("%d시 %d분", hour, min);
+				System.out.println();
+			}
+			System.out.println();
+		}
+		
+	}
+	
+	public void method17() {
+		for (int i = 2 ; i <= 9 ; i++) {
+			System.out.printf("=====%2d단=====\n",i );
+			for(int j = 1 ; j <= 9 ; j++) {
+				System.out.printf("%d x %d = %d\n", i, j, i*j);
+			}
+			System.out.println();
+		}
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
