@@ -7,8 +7,8 @@ import com.kh.chap02.loop.*;
 public class Run {
 
 	public static void main(String[] args) {
-		C_Dowhile osageu = new C_Dowhile();
-		osageu.method3();
+		A_For osageu = new A_For();
+		osageu.method18();
 	}
 
 }

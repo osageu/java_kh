@@ -302,6 +302,35 @@ public class A_For {
 			System.out.println();
 		}
 	}
+	
+	
+	
+	
+	
+	
+	public void method18() {
+		
+		while(true) {
+			
+			System.out.printf("구구단(2~9단) : ");
+			int input = osageu.nextInt();
+			
+			if (input >= 2 && input <= 9) { // 잘 입력했을 경우 --> 반복문을 통해 출력하고 method 종
+				for (int i = 1 ; i <=9 ; i++) {
+					System.out.printf("%d x %d = %2d\n", input, i, i*input);
+				}
+				
+				break;
+				
+			} else { // 잘못 입력했을 경우 --> 오류문구나오고 또 다시 물어보기
+				System.out.println("ERROR : 다시 입력해주세요!");
+			}
+		
+		}
+		
+		
+		
+	}
 }
 
 
