@@ -19,16 +19,10 @@ public class RockPaperScissors {
 			System.out.print("가위, 바위, 보 : ");
 			String input = sc.nextLine();
 			
-//			if (input.equals("전적")) {
-//				System.out.printf("수행 횟수 : %d\n이긴 횟수 : %d\n비긴 횟수 : %d\n진 횟수 : %d\n", count, win, draw, lose);
-//			}
-//			if (input.equals("exit")) {
-//				System.out.println("프로그램을 종료합니다.");
-//				break;
-//			}
 			String array[] = {"가위","바위","보"};
 			int random = ran.nextInt(3);
 			String RPS = array[random];
+			
 			if (input.equals("가위") || input.equals("바위") || input.equals("보")) {
 				System.out.println(input + " vs " + RPS);
 				count++;
