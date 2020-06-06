@@ -41,7 +41,7 @@ public class Menu {
 //			if(input < 1 || input > 9) {
 //				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
 //			} else if(input == 9) {
-//				System.out.print("프로그램을 종료합니다.");
+//				System.out.print("프로그램을 종료합니다."); ㅎㅎㅎ;
 //				break;
 //			}
 			
