@@ -9,8 +9,8 @@ import com.kh.array.*;
 public class Run {
 
 	public static void main(String[] args) {
-		C_ArraySort osageu = new C_ArraySort();
-		osageu.method1();
+		D_ArrayOverlap osageu = new D_ArrayOverlap();
+		osageu.method3();
 	}
 
 }
