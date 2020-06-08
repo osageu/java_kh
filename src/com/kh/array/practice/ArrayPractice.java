@@ -239,7 +239,31 @@ public class ArrayPractice {
 	}
 	
 	public void practice15() {
+		System.out.print("배열의 크기를 입력하세요 : ");
+		int input1 = sc.nextInt();
+		sc.nextLine();
+		int add = 0;
 		
+		String[] sArr = new String[1000];
+		for(int i = 0  ; i < sArr.length ; i++) {
+			System.out.print((i+1) + "번째 문자열 : ");
+			sArr[i] = sc.nextLine();
+			if (i+1 == input1+add) {
+				System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
+				String yn = sc.nextLine();
+				if (yn.equals("Y") || yn.equals("y")) {
+					System.out.print("더 입력하고 싶은 개수 : ");
+					add += sc.nextInt();
+					sc.nextLine();
+				} else if (yn.equals("N") || yn.equals("n")) {
+					String[] copy = Arrays.copyOf(sArr,input1+add);
+					System.out.println(Arrays.toString(copy));
+					break;
+				}
+			}
+			continue;
+		}
+	
 	}
 	
 }
