@@ -19,6 +19,7 @@ public class Run {
 //		osageu.practice13();
 //		osageu.practice14();
 		osageu.practice15();
+		
 	}
 
 }
