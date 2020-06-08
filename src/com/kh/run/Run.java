@@ -1,15 +1,16 @@
 package com.kh.run;
 import com.kh.array.*;
 
+
 /**
- * @author osageu
+ * @author user1
  *
  */
 public class Run {
 
 	public static void main(String[] args) {
-		A_Array osageu = new A_Array();
-		osageu.method10();
+		C_ArraySort osageu = new C_ArraySort();
+		osageu.method1();
 	}
 
 }

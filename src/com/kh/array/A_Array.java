@@ -245,4 +245,53 @@ public class A_Array {
 		System.out.printf("키의 평균 : %.1fcm", sum/dArr.length);
 	}
 	
+	public void method11() {
+		
+		// 1. 사용자에게 입력받은 수만큼 배열의 크기를 지정 후 
+		// 2. 0~마지막 index까지 랜덤값 담은 후
+		// 3. 0~마지막 index까지의 값 출력 하면서 짝수들의 총합 계산
+		// 4. 총합 출력
+		System.out.print("배열의 크기 : ");
+		int input = sc.nextInt();
+		int[] iArr = new int[input];
+		
+		int sum = 0;
+		for (int i = 0 ; i < iArr.length ; i++) {
+			int nansu = ran.nextInt(100) + 1;
+			iArr[i] = nansu;
+			if (iArr[i] % 2 == 0) {
+				sum += iArr[i];
+			}
+		}
+		System.out.println(Arrays.toString(iArr));
+		System.out.println("짝수의 총합 : " + sum);
+		
+//		String aa = null;
+//		for (int i = 1 ; i <= 5 ; i++) {
+//			aa += "*";
+//		}
+//		System.out.println(aa);
+		
+	}
+	
+	public void method12() {
+		
+		// 사용자에게 문자열 입력받은 후 각 문자들을 char배열에 담기
+		
+		System.out.print("문자열 : ");
+		String string = sc.nextLine();
+		char[] sArr = new char[string.length()];
+		
+		for (int i = 0 ; i < string.length() ; i++) {
+			sArr[i] = string.charAt(i);
+		}
+		System.out.println(Arrays.toString(sArr));
+		
+//		char[] cArr = new char[5];
+//		System.out.println(Arrays.toString(cArr));
+	}
+	
+	
+	
 }
+
