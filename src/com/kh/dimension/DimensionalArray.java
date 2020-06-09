@@ -215,11 +215,81 @@ public class DimensionalArray {
 	
 	public void method7() {
 		
-		int[][] arr = new int[4][4];
-		int nansu = ran.nextInt(10) + 1;
+		// no overlap 1x9 
+		int[] box = new int[9];
 		
-//		4x4 행렬을 만들고 오른쪽, 아래에 합계를 구하고 오른쪽아래에 최종합
-//		3x3 에는 1~10까지 난수를 넣어줌(중복안되게 해보세요..)
+		for (int i = 0 ; i < box.length ; i++) {
+			box[i] = ran.nextInt(9)+1;
+			for (int j = 0 ; j < i ; j++) {
+				if (box[i] == box[j]) {
+					i--;
+				}
+			}
+		}
+		
+		// array making
+		int[][] arr = new int[4][4];
+		int k = 0;
+		
+		for (int i = 0 ; i < arr.length-1 ; i++) { 
+			
+			for (int j = 0 ; j < arr[i].length-1 ; j++) { 
+				arr[i][j] = box[k];
+				k++;
+				arr[i][3] += arr[i][j]; // sum of row
+				arr[3][j] += arr[i][j]; // sum of column
+				arr[3][3] += arr[i][j]; // sum of all
+			} 
+			
+		}  
+		
+		// output of array
+		for (int i = 0 ; i < arr.length ; i++) {
+			for (int j = 0 ; j < arr[i].length ; j++) {
+				System.out.print(arr[i][j] + "\t");
+			}
+			System.out.println();
+		}
+		
+	}
+	
+	public void method8() {
+		
+		int[][] arr = new int[3][3];
+		int[] box = new int[9];
+		
+		for (int i = 0 ; i < box.length ; i++) {
+			box[i] = ran.nextInt(9)+1;
+			for (int j = 0 ; j < i ; j++) {
+				if (box[i] == box[j]) {
+					i--;
+				}
+			}
+		}
+		
+		int k = 0;
+		for (int i = 0 ; i < arr.length ; i++) {
+			
+			for (int j = 0 ; j < arr[i].length ; j++) {
+				arr[i][j] = box[k];
+				k++;
+			}
+			
+		}
+		
+		
+		for (int i = 0 ; i < box.length ; i++) {
+				System.out.print(box[i] + " ");
+		}
+		System.out.println();
+		
+		for (int i = 0 ; i < arr.length ; i++) {
+			for (int j = 0 ; j < arr[i].length ; j++) {
+				System.out.print(arr[i][j] + "\t");
+			}
+			System.out.println();
+		}
+		
 		
 	}
 	
