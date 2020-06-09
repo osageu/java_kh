@@ -1,8 +1,6 @@
 package com.kh.array.practice;
 
-import java.util.Arrays;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class ArrayPractice {
 	Scanner sc = new Scanner(System.in);
@@ -27,8 +25,8 @@ public class ArrayPractice {
 	public void practice3() {
 		System.out.print("양의 정수 : ");
 		int[] iArr = new int[sc.nextInt()];
-		for (int i = 0 ; i < iArr.length ; i++) {
-			iArr[i] = i+1;
+		for (int i = 0; i < iArr.length; i++) {
+			iArr[i] = i + 1;
 			System.out.print(iArr[i] + " ");
 		}
 	}
@@ -222,20 +220,32 @@ public class ArrayPractice {
 	}
 	
 	public void practice14() {
-		int[] lotto = new int[6];
 		
-		for (int i = 0 ; i < lotto.length ; i++) {
-			lotto[i] = ran.nextInt(45) + 1;
-			for (int j = 0 ; j < i ; j++) {
-				if (lotto[j] == lotto[i]) {
-					i--;
-				}
-			}
-		}
-		Arrays.sort(lotto, 0, lotto.length);
-		for (int i = 0 ; i < lotto.length ; i++) {
-			System.out.print(lotto[i] + " ");
-		}
+//		int[] lotto = new int[6];
+//		
+//		for (int i = 0 ; i < lotto.length ; i++) {
+//			lotto[i] = ran.nextInt(45) + 1;
+//			for (int j = 0 ; j < i ; j++) {
+//				if (lotto[j] == lotto[i]) {
+//					i--;
+//				}
+//			}
+//		}
+//		Arrays.sort(lotto, 0, lotto.length);
+//		for (int i = 0 ; i < lotto.length ; i++) {
+//			System.out.print(lotto[i] + " ");
+//		}
+		int[] origin = new int[5];
+		int[] copy = new int[7];
+		
+		System.out.println(origin);
+		System.out.println(copy);
+		
+		copy = origin;
+		
+		System.out.println(origin);
+		System.out.println(copy);
+		
 	}
 	
 	public void practice15() {
@@ -257,16 +267,17 @@ public class ArrayPractice {
 					System.out.print("더 입력하고 싶은 개수 : ");
 					add += sc.nextInt();
 					sc.nextLine();
-					
+				
 				} else if (yn.equals("N") || yn.equals("n")) {
 					String[] copy = Arrays.copyOf(sArr,input1+add);
 					System.out.println(Arrays.toString(copy));
 					break;
 				}
-				
+			
 			}
 			continue;
 		}
-		
-	}
+	
+	}	
+	
 }
