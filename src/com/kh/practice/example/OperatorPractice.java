@@ -2,18 +2,28 @@ package com.kh.practice.example;
 
 import java.util.Scanner;
 
+/**
+ * @author user1
+ *
+ */
 public class OperatorPractice {
 	Scanner osageu = new Scanner(System.in);
+<<<<<<< HEAD
 	
+=======
+>>>>>>> a0cbc73a1c3e59158c92251766ba686709db9ae8
 	public void practice1() {
 		System.out.print("정수 : ");
 		int input = osageu.nextInt();
 		System.out.println();
-		System.out.println((input > 0 ? "양수다" : "양수가 아니다"));
+		System.out.println(input > 0 ? "양수다" : "양수가 아니다");
 	}
 	
 	public void practice2() {
+<<<<<<< HEAD
 		 
+=======
+>>>>>>> a0cbc73a1c3e59158c92251766ba686709db9ae8
 		System.out.print("정수 : ");
 		int input = osageu.nextInt();
 		System.out.println();
@@ -21,7 +31,10 @@ public class OperatorPractice {
 	}
 	
 	public void practice3() {
+<<<<<<< HEAD
 		 
+=======
+>>>>>>> a0cbc73a1c3e59158c92251766ba686709db9ae8
 		System.out.print("정수 : ");
 		int input = osageu.nextInt();
 		System.out.println();
@@ -29,7 +42,10 @@ public class OperatorPractice {
 	}
 	
 	public void practice4() {
+<<<<<<< HEAD
 		 
+=======
+>>>>>>> a0cbc73a1c3e59158c92251766ba686709db9ae8
 		System.out.print("인원 수 : ");
 		int input1 = osageu.nextInt();
 		
@@ -42,7 +58,10 @@ public class OperatorPractice {
 	}
 	
 	public void practice5() {
+<<<<<<< HEAD
 		 
+=======
+>>>>>>> a0cbc73a1c3e59158c92251766ba686709db9ae8
 		System.out.print("이름 : ");
 		String name = osageu.nextLine();
 		
@@ -51,7 +70,7 @@ public class OperatorPractice {
 
 		System.out.print("반 (숫자만) : ");
 		int Class = osageu.nextInt();
-		osageu.nextLine();
+//		osageu.nextLine();
 		
 		System.out.print("번호 (숫자만) : ");
 		int number = osageu.nextInt();
@@ -65,13 +84,16 @@ public class OperatorPractice {
 		
 		String result = (gender == 'M' ? "남학생" : "여학생");
 		System.out.println();
-		System.out.printf(grade + "학년 " + Class + "반 " + number + "번 "
+		System.out.println(grade + "학년 " + Class + "반 " + number + "번 "
 									+ name + " " + result + "의 성적은 " + String.format("%,.2f",point) + "이다.");
-		
+		System.out.printf("%d학년 %d반 %d번 %s %s의 성적은 %.2f이다.", grade, Class, number, name, result, point);
 	}
 	
 	public void practice6() {
+<<<<<<< HEAD
 		 
+=======
+>>>>>>> a0cbc73a1c3e59158c92251766ba686709db9ae8
 		System.out.print("나이 : ");
 		int input = osageu.nextInt();
 		
@@ -80,7 +102,10 @@ public class OperatorPractice {
 	}
 	
 	public void practice7() {
+<<<<<<< HEAD
 		 
+=======
+>>>>>>> a0cbc73a1c3e59158c92251766ba686709db9ae8
 		System.out.print("국어 : ");
 		int korean = osageu.nextInt();
 		
@@ -92,18 +117,15 @@ public class OperatorPractice {
 		int math = osageu.nextInt();
 		
 		int sum = korean + english + math;
-		double average = (korean + english + math)/3;
 		
 		System.out.println();
-		System.out.println("합계 : " + sum + "\n" + "평균 : " + sum/3.0);
-		if (korean >= 40 && english >= 40 && math >= 40 && average > 60) {
-			System.out.println("합격");
-		} else {
-			System.out.println("불합격");
-		}
-//		(korean >=40 && english >= 40 && math >=40 && sum >= 60) !=  ? "합격" : "불합격");
-				
-		
+		System.out.println("합계 : " + sum + "\n" + "평균 : " + sum/3.0 + "\n" + "\n" + (korean >=40 && english >= 40 && math >=40 && sum >= 60 ? "합격" : "불합격"));
+//		System.out.println("합계 : " + sum + "\n" + "평균 : " + sum/3.0);
+//		if (korean >= 40 && english >= 40 && math >= 40 && average > 60) {
+//			System.out.println("합격");
+//		} else {
+//			System.out.println("불합격");
+//		}
 	}
 	
 	public void practice8() {
@@ -111,11 +133,14 @@ public class OperatorPractice {
 		char input = osageu.nextLine().charAt(7);
 		
 		System.out.println();
-		System.out.println(input == '1' || input == '3' ? "남자" : "여자");
+		System.out.println(input == '1' || input == '3' ? "남자" : (input == '2' || input == '4' ? "여자" : "error"));
 	}
 	
 	public void practice9() {
+<<<<<<< HEAD
 		 
+=======
+>>>>>>> a0cbc73a1c3e59158c92251766ba686709db9ae8
 		System.out.print("정수1 : ");
 		int num1 = osageu.nextInt();
 		
@@ -131,7 +156,10 @@ public class OperatorPractice {
 	}
 	
 	public void practice10() {
+<<<<<<< HEAD
 		 
+=======
+>>>>>>> a0cbc73a1c3e59158c92251766ba686709db9ae8
 		System.out.print("입력1 : ");
 		int input1 = osageu.nextInt();
 		
@@ -148,7 +176,10 @@ public class OperatorPractice {
 	}
 	
 	public void practice11() {
+<<<<<<< HEAD
 		 
+=======
+>>>>>>> a0cbc73a1c3e59158c92251766ba686709db9ae8
 		System.out.print("A 사원의 연봉 : ");
 		double inputA = osageu.nextDouble();
 		
@@ -163,6 +194,7 @@ public class OperatorPractice {
 		double A[ ] = {1.4*inputA, 1*inputB, 1.15*inputC};
 		char B[ ] = {'A', 'B', 'C'};
 		
+		// double은 8 byte (64bit) 이다 보니 하나하나 0,1인 이진수가 들어가서 미세한 오차가 발생.
 		System.out.println();
 		System.out.println(B[0] + "사원의 인센티브포함 연봉 : " + A[0] + "\n" + (A[0] >= 3000 ? "3000이상" : "3000미만"));
 		System.out.println(B[1] + "사원의 인센티브포함 연봉 : " + A[1] + "\n" + (A[1] >= 3000 ? "3000이상" : "3000미만"));

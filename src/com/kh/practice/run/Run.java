@@ -11,10 +11,10 @@ public class Run {
 //		osageu.practice5();
 //		osageu.practice6();
 //		osageu.practice7();
-//		osageu.practice8();
+		osageu.practice8();
 //		osageu.practice9();
 //		osageu.practice10();
-		osageu.practice11();
+//		osageu.practice11();
 	}
 
 }
