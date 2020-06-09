@@ -213,4 +213,14 @@ public class DimensionalArray {
 		
 	}
 	
+	public void method7() {
+		
+		int[][] arr = new int[4][4];
+		int nansu = ran.nextInt(10) + 1;
+		
+//		4x4 행렬을 만들고 오른쪽, 아래에 합계를 구하고 오른쪽아래에 최종합
+//		3x3 에는 1~10까지 난수를 넣어줌(중복안되게 해보세요..)
+		
+	}
+	
 }
