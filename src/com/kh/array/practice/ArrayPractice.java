@@ -93,6 +93,7 @@ public class ArrayPractice {
 	}
 	
 	public void practice8() {
+		
 		while(true) {
 			
 			System.out.print("정수 : ");
@@ -101,13 +102,20 @@ public class ArrayPractice {
 				System.out.println("다시 입력하세요.");
 				continue;
 			}
+			
 			int[] iArr = new int[input];
-			for (int i = 0 ; i <= iArr.length/2 ; i++) { 
-				iArr[i] = i+1;
+			int value = 1;
+			for (int i = 0 ; i < iArr.length ; i++) { 
+				if (i < iArr.length/2+1) { 
+					iArr[i] = value++;
+					if ( i == iArr.length/2) {
+						value--;
+					}
+				} else if (i > iArr.length/2) {
+					iArr[i] = --value;
+				}
 			}
-			for (int i = iArr.length/2 + 1 ; i < iArr.length; i++) {
-				iArr[i] = iArr[i-1]-1;
-			}
+			
 			for (int i = 0 ; i < iArr.length ; i++) {
 				if (i == iArr.length-1) {
 					System.out.print(iArr[i]);
