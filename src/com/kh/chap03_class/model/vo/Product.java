@@ -8,7 +8,11 @@ public class Product {
 	private String brand;
 	
 	// Constructor
-	
+	public Product() {
+		// 출력문이 있으면 출력문도 같이 출력해줌.
+	}
 	
 	// Method
+	
+	
 }
