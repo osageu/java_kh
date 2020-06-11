@@ -1,5 +1,6 @@
 package com.kh.chap01_abstraction.run;
 import com.kh.chap01_abstraction.model.vo.*;
+import com.kh.chap04_field.model.vo.FieldTest3;
 public class Run {
 
 	public static void main(String[] args) {
@@ -18,6 +19,8 @@ public class Run {
 		hong.name = "김말똥";
 		hong.age = 21;
 		hong.height = 175.4;
+		
+		System.out.println(FieldTest3.sta);
 		
 	}
 

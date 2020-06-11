@@ -1,5 +1,6 @@
 package com.kh.chap02_encapsulation.run;
 import com.kh.chap02_encapsulation.model.vo.*;
+import com.kh.chap04_field.model.vo.FieldTest3;
 
 /**
  * @author user1
@@ -35,6 +36,8 @@ public class Run {
 		System.out.println(mal.information());
 		System.out.println(hong);
 		System.out.println(mal);
+		
+		System.out.println(FieldTest3.sta);
 	}
 
 }
