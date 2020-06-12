@@ -14,7 +14,7 @@ public class Run {
 		System.out.println("====================================================");
 		
 		// 2. 매개변수 생성자로 객체 생성
-		User u2 = new User("pass22", "이상훈",26); // age랑 gender field도 기본값으로 만들어지긴 함
+		User u2 = new User("user02", "pass22", "이상훈"); // age랑 gender field도 기본값으로 만들어지긴 함
 		System.out.println(u2.info());
 		// 생성과 동시에 userId, userPwd, userName에 초기화됨
 		System.out.println("====================================================");

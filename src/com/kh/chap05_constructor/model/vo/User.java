@@ -34,10 +34,10 @@ public class User {
 	 }
 	
 	// parameterized constructor (3개)
-	public User(String userPwd, String userName, int userAge) {
+	public User(String userId, String userPwd, String userName) {
+		this.userId = userId;
 		this.userPwd = userPwd;
 		this.userName = userName;
-		this.userAge = userAge;
 	}
 	
 	// parameterized constructor (5개)
@@ -47,7 +47,7 @@ public class User {
 		this.userPwd = userPwd;
 		this.userName = userName;
 		*/
-		this(userPwd, userName, userAge); // this( ) : 또 다른 생성자 호출 , 가장 윗 줄에 호출해야 함.
+		this(userId, userPwd, userName); // this( ) : 또 다른 생성자 호출 , 가장 윗 줄에 호출해야 함.
 		this.userId = userId;
 		this.userGender = userGender;
 	}
