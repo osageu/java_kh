@@ -1,39 +1,37 @@
 package com.hw1.run;
-import com.hw1.model.vo.*;
+import java.util.Arrays;
+
+import com.hw1.model.vo.Product;
 
 public class ProductTest {
 
 	public static void main(String[] args) {
 		
-		Product osageu1 = new Product();
-		Product osageu2 = new Product();
-		Product osageu3 = new Product();
-		System.out.println(osageu1.info());
-		System.out.println(osageu2.info());
-		System.out.println(osageu3.info());
+		// 1)
+		Product[] phone = new Product[3];
+		phone[0] = new Product("ssgnote9", "갤럭시노트9", "경기도 수원", 960000, 10.0);
+		phone[1] = new Product("lgxnote5", "LG스마트폰5", "경기도 평택", 780000, 0.7);
+		phone[2] = new Product("ktsnote3", "KT스마트폰3", "서울시 강남", 250000, 0.3);
+		for (int i = 0 ; i < phone.length ; i++) {
+			System.out.println(phone[i].info());
+		}
+		System.out.println("==============================================");
 		
-		// osageu1
-		osageu1.setProductId("ssgnote9");
-		osageu1.setProductName("갤럭시노트9");
-		osageu1.setProductArea("경기도 수원");
-		osageu1.setPrice(960000);
-		osageu1.setTax(10.0);
+		// 2)
+		for (int i = 0 ; i < phone.length ; i++) {
+			phone[i].setPrice(1200000);
+			phone[i].setTax(0.05);
+		}
+		for (int i = 0 ; i < phone.length ; i++) {
+			System.out.println(phone[i].info());
+		}
+		System.out.println("==============================================");
 		
-		// osageu2
-		osageu2.setProductId("lgxnote5");
-		osageu2.setProductName("LG스마트폰5");
-		osageu2.setProductArea("경기도 평택");
-		osageu2.setPrice(780000);
-		osageu2.setTax(0.7);
-		
-		// osageu3
-		osageu1.setProductId("ktsnote3");
-		osageu1.setProductName("KT스마트폰3");
-		osageu1.setProductArea("서울시 강남");
-		osageu1.setPrice(250000);
-		osageu1.setTax(0.3);
-		
+		// 3)
+		for (int i = 0 ; i < phone.length ; i++) {
+			System.out.println("상품명 = " + phone[i].getProductName());
+			System.out.println("부가세 포함 가격 = " + (int)(phone[i].getPrice() + (phone[i].getPrice() * phone[i].getTax())) + "원");
+		}
 		
 	}
-
 }

@@ -38,6 +38,7 @@ public class Product {
 	public void setTax (double tax) {
 		this.tax = tax;
 	}
+	
 	// getter
 	public String getProductId() {
 		return productId;
