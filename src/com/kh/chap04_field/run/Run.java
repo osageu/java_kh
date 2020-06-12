@@ -5,6 +5,10 @@ public class Run {
 
 	public static void main(String[] args) {
 		
+		// FieldTest1
+		FieldTest1 f1 = new FieldTest1();
+		f1.test(5);
+		
 		// FieldTest2
 		FieldTest2 f2 = new FieldTest2();
 		
