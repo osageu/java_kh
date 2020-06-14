@@ -24,18 +24,15 @@ public class NonStaticSample {
 			}
 		}
 		Arrays.sort(lotto);
-		System.out.print("랜덤 값 : ");
 		for (int i = 0 ; i < lotto.length ; i++) {
 			System.out.print(lotto[i] + " ");
 		}
-		System.out.println();
 		
 	}
 	
 	// 2)
 	public void outputChar(int num, char c) {
 		
-		System.out.printf("%c문자 %d개 출력 : ", c, num);
 		for (int i = 1 ; i <= num ; i++) {
 			System.out.print(c + "  ");
 		}
@@ -45,8 +42,6 @@ public class NonStaticSample {
 	// 3)
 	public char alphabette() { // 65~90 : A to Z , 97~122 : a to z
 		
-		System.out.println();
-		System.out.print("랜덤 영문자 출력 : ");
 		while(true) {
 			int AToz = ran.nextInt(58) + 65; 
 			if ( AToz >= 91 && AToz <= 96) {

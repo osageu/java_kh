@@ -15,7 +15,6 @@ public class NonStaticSample {
 		for (int i = 0 ; i < length ; i++) {
 			iArr[i] = ran.nextInt(100) + 1;
 		}
-		System.out.print("크기가  " + length + "인 배열의 랜덤값 : ");
 		return iArr;
 		
 	}
@@ -25,7 +24,6 @@ public class NonStaticSample {
 		for (int i = 0 ; i < arr.length ; i++) {
 			System.out.print(arr[i] + "   ");
 		}
-		System.out.println();
 		
 	}
 	
@@ -54,14 +52,12 @@ public class NonStaticSample {
 			}
 			
 		}
-		System.out.print("내림차순 출력 : ");
 		display(arr);
 		
 	}
 	
 	public void sortAscending (int[] arr) {
 		Arrays.sort(arr);
-		System.out.print("오름차순 출력 : ");
 		display(arr);
 	}
 
