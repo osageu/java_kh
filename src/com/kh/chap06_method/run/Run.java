@@ -58,6 +58,7 @@ public class Run {
 		System.out.println(Math.PI);
 		// Math m = new Math(); --> 객체생성할 필요가 없어서 access modifier가 private임.
 		Scanner sc = new Scanner(System.in);
+		
 	}
 	
 }
