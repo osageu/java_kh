@@ -1,7 +1,7 @@
 package mvc.model.vo;
 
 /**
- * @author user1
+ * @author osageu
  *
  */
 public class Member {

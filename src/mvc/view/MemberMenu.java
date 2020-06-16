@@ -4,7 +4,7 @@ import mvc.model.vo.*;
 import java.util.*;
 
 /**
- * @author user1
+ * @author osageu
  *
  */
 public class MemberMenu {

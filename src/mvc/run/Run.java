@@ -3,7 +3,7 @@ package mvc.run;
 import mvc.view.MemberMenu;
 
 /**
- * @author user1
+ * @author osageu
  *
  */
 public class Run {

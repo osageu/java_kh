@@ -4,7 +4,7 @@ import java.util.Arrays;
 import mvc.model.vo.*;
 
 /**
- * @author user1
+ * @author osageu
  *
  */
 public class MemberController {
@@ -21,6 +21,7 @@ public class MemberController {
 	mem[4] = new Member("user05", "pass05", "신사임당", 45, 'F', "shin@naver.com"); 
 	memberCount = 5;
 	}
+	
 	// constructor
 	public MemberController() {
 		
@@ -96,10 +97,10 @@ public class MemberController {
 		
 	}
 	
-	public void deleteMember(String userId) { // userId = mem[2].getUserId;
+	public void deleteMember(String userId) { 
 		
 		int temp = 0;
-		for ( int i = 0 ; i < memberCount ; i++) { // memberCount = 5 ( i = 0, 1, 2, 3, 4 )
+		for ( int i = 0 ; i < memberCount ; i++) { 
 			if (userId.equals(mem[i].getUserId())) {
 				temp = i;
 			}
@@ -111,11 +112,5 @@ public class MemberController {
 		memberCount--;
 		
 	}
-	// mem[0] --> pass
-	// mem[1] --> pass
-	// mem[2] --> mem[2] = mem[3]
-	// mem[3] --> mem[3] = mem[4]
-	// mem[4] --> mem[4]
-	
 	
 }
