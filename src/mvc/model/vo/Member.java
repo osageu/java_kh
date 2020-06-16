@@ -68,7 +68,7 @@ public class Member {
 	
 	// information
 	public String info() {
-		return userId + userPwd + name + age + gender + email;
+		return "ID : " + userId + ", PW : " + userPwd + ", Name : " + name + ", Age : " + age + ", Gender : " + gender + ", Email : " + email;
 	}
 	
 }
