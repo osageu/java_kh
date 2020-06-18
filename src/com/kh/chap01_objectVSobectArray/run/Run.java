@@ -1,4 +1,6 @@
 package com.kh.chap01_objectVSobectArray.run;
+import java.util.Arrays;
+
 import com.kh.chap01_objectVSobectArray.model.vo.*;
 
 public class Run {
@@ -17,12 +19,12 @@ public class Run {
 		for (int i = 0 ; i < arr.length ; i++) {
 			System.out.println(arr[i].info());
 		}
-		
-		// 향상된 for문
-//		int[] iArr = new int[3];
-//		for (int number : iArr) {
-//			System.out.print(number + " ");
-//		}
+//		
+//		// 향상된 for문
+////		int[] iArr = new int[3];
+////		for (int number : iArr) {
+////			System.out.print(number + " ");
+////		}
 		for (Product p : arr) {
 			System.out.print(p.info() + "\n");
 		}
