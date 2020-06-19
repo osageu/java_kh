@@ -29,5 +29,10 @@ public class Ship extends Vehicle{
 	public String info() {
 		return super.info() + ", 프로펠러수 : " + propeller;
 	}
+	
+	@Override
+	public void howToMove() {
+		System.out.println("물살을 가로지르며 나아간다.");
+	}
 
 }

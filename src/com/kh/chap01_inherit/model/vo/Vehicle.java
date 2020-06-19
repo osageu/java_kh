@@ -49,4 +49,9 @@ public class Vehicle {
 		return "이름 : " + name + ", 연비 : " + mileage + ", 종류 : " + kind;
 	}
 	
+	// new method
+	public void howToMove() {
+		System.out.println("움직인다.");
+	}
+	
 }

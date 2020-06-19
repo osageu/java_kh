@@ -12,6 +12,9 @@ public class Run {
 		System.out.println(air1.info());
 		System.out.println(ship1.info());
 		
+		car1.howToMove();
+		air1.howToMove();
+		ship1.howToMove();
 	}
 
 }

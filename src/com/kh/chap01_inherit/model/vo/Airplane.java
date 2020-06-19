@@ -40,4 +40,10 @@ public class Airplane extends Vehicle{
 		return super.info() + ", 바퀴수 : " + tire + ", 날개수" + wing;
 	}
 	
+	// new method
+	@Override
+	public void howToMove() {
+		System.out.println("바람을 가르며 날아간다.");
+	}
+	
 }

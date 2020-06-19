@@ -30,4 +30,8 @@ public class Car extends Vehicle{
 		return super.info() + ", 바퀴수 : " + tire;
 	}
 	
+	@Override
+	public void howToMove() {
+		System.out.println("바퀴를 구동하며 움직인다.");
+	}
 }
