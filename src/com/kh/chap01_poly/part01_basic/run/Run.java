@@ -1,5 +1,5 @@
-package com.kh.chap01_poly.par01_basic.run;
-import com.kh.chap01_poly.par01_basic.model.vo.*;
+package com.kh.chap01_poly.part01_basic.run;
+import com.kh.chap01_poly.part01_basic.model.vo.*;
 
 public class Run {
 
@@ -40,7 +40,7 @@ public class Run {
 		test[1] = new Child2(3,2,1);
 		test[2] = new Parent(2,1);
 		// 각각의 자식객체들에 접근할 때, 하나의 부모타입으로 접근 --> 편리, 코드감소, 유연한 코딩
-		((Child1)test[0]).printChild1();
+		(test[0]).print();
 		((Child2)test[1]).printChild2();
 		((Parent)test[2]).printParent();
 		
@@ -59,9 +59,17 @@ public class Run {
 				((Child2)test[i]).printChild2();
 			} else {
 				System.out.print("Parent : ");
-				test[i].printParent();
+				(test[i]).printParent();
 			}
 		}
+		
+		System.out.println("==== Instanceof 대신 쓴 것 ====");
+		for (int i = 0 ; i < test.length; i++) {
+			System.out.println(test[i].toString());
+			test[i].print();
+		}
+		
+		
 		
 	}
 

@@ -1,4 +1,4 @@
-package com.kh.chap01_poly.par01_basic.model.vo;
+package com.kh.chap01_poly.part01_basic.model.vo;
 
 public class Child2 extends Parent{
 	
@@ -25,5 +25,10 @@ public class Child2 extends Parent{
 		System.out.println("난 Child2야~~♤");
 	}
 	
+	// 부모, 자식인지 출력하는 method
+	@Override
+	public void print() {
+		System.out.println("난 Child2야~~♤");
+	}
 	
 }

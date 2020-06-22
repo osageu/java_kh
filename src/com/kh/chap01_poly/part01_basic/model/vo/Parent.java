@@ -1,4 +1,4 @@
-package com.kh.chap01_poly.par01_basic.model.vo;
+package com.kh.chap01_poly.part01_basic.model.vo;
 
 public class Parent {
 	
@@ -32,5 +32,9 @@ public class Parent {
 		System.out.println("난 Parent야~~♡");
 	}
 	
+	// 부모, 자식인지 출력하는 method
+	public void print() {
+		System.out.println("나 Parent야~~♥");
+	}
 	
 }
