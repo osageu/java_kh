@@ -37,9 +37,10 @@ public class LibraryMenu {
 			System.out.println("0. 프로그램 종료하기");
 			System.out.print("Select Menu : ");
 			int select = sc.nextInt();
+			sc.nextLine();
 			
 			switch(select) {
-			case 1 : lm.myInfo(); break;
+			case 1 : System.out.println(lm.myInfo().getCouponCount()); break;
 			case 2 : selectAll(); break;
 			case 3 : searchBook(); break;
 			case 4 : rentBook(); break;
@@ -53,7 +54,7 @@ public class LibraryMenu {
 	public void selectAll() {
 		Book[] bList = lm.selectAll();
 		for (int i = 0 ; i < bList.length ; i++) {
-			System.out.println(i + "번 도서 : " + bList[i]);
+			System.out.println(i+1 + "번 도서 : " + bList[i]);
 		}
 		return;
 	}
@@ -61,17 +62,19 @@ public class LibraryMenu {
 	public void searchBook() {
 		System.out.print("검색할 제목 키워드 : ");
 		String keyword = sc.nextLine();
+		
 		Book[] searchList = lm.searchBook(keyword);
 		for (Book a : searchList) {
 			System.out.println(a);
 		}
+		
 	}
 	
 	public void rentBook() {
 		selectAll();
 		System.out.print("대여할 도서 번호 선택 : ");
 		int num = sc.nextInt();
-		int result = lm.rentBook(num);
+		int result = lm.rentBook(num-1);
 		switch(result) {
 		case 0 : System.out.println("성공적으로 대여되었습니다."); break;
 		case 1 : System.out.println("나이 제한으로 대여 불가능입니다."); break;
