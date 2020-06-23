@@ -5,8 +5,10 @@ public class Run {
 
 	public static void main(String[] args) {
 		
-		B_StringMethodTest b = new B_StringMethodTest();
-		b.method();
+		D_BuilderBuffer d = new D_BuilderBuffer();
+//		d.method1();
+		d.method2();
+		
 	}
 
 }
