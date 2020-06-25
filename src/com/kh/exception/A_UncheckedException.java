@@ -23,7 +23,7 @@ public class A_UncheckedException {
 	
 	public void method1() {
 		
-		// 1. ArithmeticException
+		// ArithmeticException
 //		System.out.print("첫 번째 정수 : ");
 //		int num1 = sc.nextInt();
 //		System.out.print("두 번째 정수 : ");
@@ -61,13 +61,38 @@ public class A_UncheckedException {
 		int num2 = sc.nextInt();
 		int result = 0;
 		try {
+			System.out.println("안녕하세요");
 			result = num1 / num2;
 		} catch(ArithmeticException e) {
 			System.out.println("0으로는 나눌 수 없습니다.");
 		}
 		System.out.println("result : " + result);
 		
+	}
+	
+	public void method2() {
+		
+		// NegativeArraySizeException & ArrayIndexOutOfBoundsException
+		System.out.print("배열의 길이 : ");
+		int size = sc.nextInt();
+		
+//		try {
+//			int[] arr = new int[size];
+//			System.out.println(arr[0]);
+//		} catch (NegativeArraySizeException e) {
+//			System.out.println("프로그램을 종료합니다");
+//		} catch (ArrayIndexOutOfBoundsException e) {
+//			System.out.println("프로그램을 종료합니다2");
+//		}
+		
+		try {
+			int[] arr = new int[size];
+			System.out.println(arr[0]);
+		} catch (Exception e) {
+			System.out.println("Exception");
+		} 
 		
 	}
+	
 	
 }
