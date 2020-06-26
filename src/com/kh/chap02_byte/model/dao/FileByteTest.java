@@ -14,7 +14,7 @@ public class FileByteTest {
 		// true 작성 시 : 기존의 파일에 이어서 출력
 		FileOutputStream fos = null;
 		try {
-			fos = new FileOutputStream("a_byte.txt"); // 해당 파일없으면 생성, 있으면 연결
+			fos = new FileOutputStream("a_byte.txt",true); // 해당 파일없으면 생성, 있으면 연결
 			// FileNotFoundException : 존재하지 않는 경로 제시할 경우
 			// 2. 해당 Stream으로 데이터 출력 --> Stream.write() method 사용!
 			// 단, 파일에 기록되기로는 숫자로 기록되지 않음 
@@ -53,15 +53,34 @@ public class FileByteTest {
 			fis = new FileInputStream("a_byte.txt");
 			// 2. 파일로부터 데이터 입력받아오기
 			// --> Stream.read() method
-			for (int i = 1 ; i < "a_byte.txt".length() ; i++) {
-				if (fis.read() != -1) {
-					System.out.println(fis.read());
-				} 
+//			for (int i = 1 ; i < "a_byte.txt".length() ; i++) {
+//				if (fis.read() != -1) { // 조건식에서의 fis.read()도 문자값을 불러오기 때문에 퐁당퐁당 입력됨
+//					System.out.println(fis.read());
+//				} 
+//			}
+			// 해결 1. 무한반복 돌리면서 조건검사
+//			while(true) {
+//				
+//				int value = fis.read();
+//				if (value == -1) {
+//					break;
+//				}
+//				System.out.println(value);
+//			}
+			// 해결 2. 그냥.. 변수활용해
+			int value = 0;
+			while((value = fis.read()) != -1) {
+				System.out.print((char)value);
 			}
+			
 		} catch(Exception e) {
 			
 		} finally {
-			
+			try {
+				fis.close();
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
 		}
 		
 	}
