@@ -5,10 +5,7 @@ public class Run {
 
 	public static void main(String[] args) {
 		
-		D_BuilderBuffer d = new D_BuilderBuffer();
-//		d.method1();
-		d.method2();
-		
+		new D_BuilderBuffer().method2();
 	}
 
 }
