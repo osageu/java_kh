@@ -55,5 +55,5 @@ public class BookManager {
 	public ArrayList<Book> selectList() {
 		return bookList;
 	}
-	
+	// end
 }
