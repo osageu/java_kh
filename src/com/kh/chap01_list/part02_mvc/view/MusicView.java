@@ -71,9 +71,20 @@ public class MusicView {
 	// 서브화면3. 특정 곡 검색
 	private void searchMusic() {
 		System.out.println("==== 곡 검색 ====");
+		if (mc.showAllMusic().isEmpty()) {
+			System.out.println("아직 추가된 곡이 없습니다.");
+			return;
+		}
+		
+		System.out.println("1. 곡명으로 검색");
+		System.out.println("2. 가수명으로 검색");
+		System.out.println("3. 곡명+가수명으로 검색");
+		System.out.print("Select Menu : ");
+		int select = sc.nextInt();
+		sc.nextLine();
 		System.out.print("검색할 키워드 : ");
 		String search = sc.nextLine();
-		ArrayList<Music> salmon = mc.searchMusic(search);
+		ArrayList<Music> salmon = mc.searchMusic(select, search);
 			if(salmon.isEmpty()) {
 				System.out.println("검색 결과가 없습니다.");
 			} else {
@@ -86,6 +97,10 @@ public class MusicView {
 	// 서브화면4. 특정 곡 삭제
 	private void deleteMusic() {
 		System.out.println("==== 곡 삭제 ====");
+		if (mc.showAllMusic().isEmpty()) {
+			System.out.println("아직 추가된 곡이 없습니다.");
+			return;
+		}
 		System.out.print("삭제할 곡의 이름 : ");
 		String delete = sc.nextLine();
 		int result = mc.deleteMusic(delete);
@@ -99,8 +114,29 @@ public class MusicView {
 	// 서브화면5. 특정 곡 수정
 	private void editMusic() {
 		System.out.println("==== 곡 수정 ====");
-		System.out.print("수정할 곡의 이름 : ");
-		String edit = sc.nextLine();
+		if (mc.showAllMusic().isEmpty()) {
+			System.out.println("아직 추가된 곡이 없습니다.");
+			return;
+		}
+		String edit = "";
+		while(true) {
+			System.out.print("수정할 곡의 이름 : ");
+			edit = sc.nextLine();
+			int result = 0;
+			for (int i = 0 ; i < mc.showAllMusic().size() ; i++) {
+				if (mc.showAllMusic().get(i).getTitle().equals(edit)) {
+					System.out.println(mc.showAllMusic().get(i));
+					break;
+				} else {
+					System.out.println("존재하지 않는 곡명입니다. 다시 입력하세요.");
+					result = 1;
+				}
+			}
+			if (result == 1) {
+				continue;
+			}
+			break;
+		}
 		System.out.print("곡명 : ");
 		String title = sc.nextLine();
 		System.out.print("가수명 : ");

@@ -25,13 +25,28 @@ public class MusicController {
 	}
 	
 	// 3. 곡 검색
-	public ArrayList<Music> searchMusic(String search) {
+	public ArrayList<Music> searchMusic(int select, String search) {
 		ArrayList<Music> copy = new ArrayList<>();
-		for (int i = 0 ; i < list.size() ; i++) {
-			if (list.get(i).getTitle().contains(search) || list.get(i).getArtist().contains(search)) {
-				 copy.add(list.get(i));
+		
+		switch(select) { // switch open
+		case 1 : for (int i = 0 ; i < list.size() ; i++) {
+			if (list.get(i).getTitle().contains(search)) {
+				copy.add(list.get(i));
 			}
-		}
+		} break;
+
+		case 2 : for (int i = 0 ; i < list.size() ; i++) {
+			if (list.get(i).getArtist().contains(search)) {
+				copy.add(list.get(i));
+			}
+		} break;
+
+		case 3 : for (int i = 0 ; i < list.size() ; i++) {
+			if (list.get(i).getTitle().contains(search) || list.get(i).getArtist().contains(search)) {
+				copy.add(list.get(i));
+			}
+		} break;
+		} // swtich close
 		return copy;
 	}
 	
