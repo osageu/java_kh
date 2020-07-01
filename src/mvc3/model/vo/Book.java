@@ -1,6 +1,6 @@
 package mvc3.model.vo;
 
-public class Book {
+public class Book implements Comparable<Book>{
 	
 	// field
 	private int bNo;
@@ -46,6 +46,10 @@ public class Book {
 	@Override
 	public String toString() {
 		return "Book [bNo=" + bNo + ", title=" + title + ", category=" + category + ", author=" + author + "]";
+	}
+	@Override
+	public int compareTo(Book o) {
+		return this.title.compareTo(o.title);
 	}
 	
 }

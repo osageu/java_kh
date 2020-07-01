@@ -24,6 +24,7 @@ public class BookMenu {
 			System.out.println("2. 도서 삭제");
 			System.out.println("3. 도서 검색");
 			System.out.println("4. 전체 출력");
+			System.out.println("5. 도서 정렬");
 			System.out.println("0. 끝내기");
 			System.out.print("Select Menu : ");
 			int select = sc.nextInt();
@@ -34,6 +35,7 @@ public class BookMenu {
 			case 2 : deleteBook(); break;
 			case 3 : searchBook(); break;
 			case 4 : selectList(); break;
+			case 5 : sortBook(); break;
 			case 0 : System.out.println("♡~~Exit program~~♡"); return;
 			default : System.out.println("Select Again"); break;
 			}
@@ -102,4 +104,32 @@ public class BookMenu {
 		}
 	}
 	
+	/**
+	 * 
+	 */
+	public void sortBook() {
+		System.out.println("1. 도서명 오름차순 정렬");
+		System.out.println("2. 저자명 내림차순 정렬");
+		System.out.print("Select Menu : ");
+		int select = sc.nextInt(); 
+		sc.nextLine();
+		ArrayList<Book> copy = bm.sortBook(select);
+		for (Book b : copy) {
+			System.out.println(b);
+		}
+	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

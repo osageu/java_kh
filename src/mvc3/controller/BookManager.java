@@ -1,12 +1,13 @@
 package mvc3.controller;
-import mvc3.model.vo.Book;
+import mvc3.model.vo.*;
+
 import java.util.*;
 
 public class BookManager {
 	
 	// field
 	private ArrayList<Book> bookList = new ArrayList<>();
-	private int bNo = 1;
+	private int bNo;
 	// constructor
 	public BookManager() {
 		
@@ -55,5 +56,19 @@ public class BookManager {
 	public ArrayList<Book> selectList() {
 		return bookList;
 	}
-	// end
+	
+	// 5. 책 정렬
+	public ArrayList<Book> sortBook(int select) {
+		
+		ArrayList<Book> copy = new ArrayList<>();
+		copy.addAll(bookList);
+		
+		switch(select) {
+		case 1 : Collections.sort(copy); break;
+		case 2 : Collections.sort(copy, new SortDesc()); break;
+		}
+		
+		return copy;
+	}
+	
 }
