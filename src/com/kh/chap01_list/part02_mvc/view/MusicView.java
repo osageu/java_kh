@@ -44,7 +44,9 @@ public class MusicView {
 		
 	}
 	
-	// 서브화면1. 신규 곡을 추가하는 화면
+	/**
+	 * 서브화면1. 신규 곡을 추가하는 화면
+	 */
 	private void insertMusic() {
 		System.out.println("==== 곡 추가 ====");
 		System.out.print("곡명 : ");
@@ -55,7 +57,9 @@ public class MusicView {
 		System.out.println("곡 추가 완료");
 	}
 	
-	// 서브화면2. 전체 곡 조회
+	/**
+	 * 서브화면2. 전체 곡 조회
+	 */
 	private void showAllMusic() {
 		System.out.println("==== 곡 리스트 ====");
 		ArrayList<Music> salmon = mc.showAllMusic();
@@ -68,7 +72,9 @@ public class MusicView {
 		}
 	}
 	
-	// 서브화면3. 특정 곡 검색
+	/**
+	 *  서브화면3. 특정 곡 검색
+	 */
 	private void searchMusic() {
 		System.out.println("==== 곡 검색 ====");
 		if (mc.showAllMusic().isEmpty()) {
@@ -94,7 +100,9 @@ public class MusicView {
 		}
 	}
 	
-	// 서브화면4. 특정 곡 삭제
+	/**
+	 *  서브화면4. 특정 곡 삭제
+	 */
 	private void deleteMusic() {
 		System.out.println("==== 곡 삭제 ====");
 		if (mc.showAllMusic().isEmpty()) {
@@ -111,7 +119,9 @@ public class MusicView {
 		}
 	}
 	
-	// 서브화면5. 특정 곡 수정
+	/**
+	 *  서브화면5. 특정 곡 수정
+	 */
 	private void editMusic() {
 		System.out.println("==== 곡 수정 ====");
 		if (mc.showAllMusic().isEmpty()) {
@@ -145,13 +155,29 @@ public class MusicView {
 		int result = mc.editMusic(edit, title, artist);
 		if (result == 1) {
 			System.out.println("수정되었습니다.");
-		} else if (result ==2) {
-			System.out.println("존재하지 않는 곡명입니다.");
 		}
 	}
 	
-	// 서브화면6. 곡 정렬
+	/**
+	 *  서브화면6. 곡 정렬
+	 */
 	private void sortMusic() {
+		System.out.println("==== 곡 정렬 ====");
+		System.out.println("1. 가수명 오름차순");
+		System.out.println("2. 가수명 내림차순");
+		System.out.println("3. 곡명 오름차순");
+		System.out.println("4. 곡명 내림차순");
+		System.out.print("Select Menu : ");
+		int select = sc.nextInt();
+		sc.nextLine();
+		
+		if (select <1 || select >4) {
+			System.out.println("Error : Select Again!");
+			return;
+		}
+		for (int i = 0 ; i < mc.sortMusic(select).size() ; i++) {
+			System.out.println(mc.sortMusic(select).get(i));
+		}
 		
 	}
 	
