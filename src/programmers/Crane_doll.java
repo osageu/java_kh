@@ -1,7 +1,7 @@
-package practice;
+package programmers;
 import java.util.*;
 
-public class crane_doll {
+public class Crane_doll {
 	
 	public int[] solution(int[][] board, int[] moves) { // solution open
 		

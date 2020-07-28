@@ -1,11 +1,14 @@
 package programmers;
+import java.util.Arrays;
 
 public class kNumber {
 	public int[] solution(int[] array, int[][] commands) {
-        int[] answer = {1,2,3};
-        
-        
-        
+        int[] answer = new int[commands.length];
+		for (int i = 0 ; i < commands.length ; i++) {
+			int[] copy = Arrays.copyOfRange(array, commands[i][0]-1, commands[i][1]);
+			Arrays.sort(copy);
+			answer[i] = copy[commands[i][2]-1];
+		}
         return answer;
     }
 }
