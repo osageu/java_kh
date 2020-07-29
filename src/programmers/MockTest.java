@@ -2,7 +2,7 @@ package programmers;
 
 import java.util.ArrayList;
 
-class Solution {
+class MockTest {
     public ArrayList<Integer> solution(int[] answers) {
         // 1번 수포자 : [ 1, 2 ,3 ,4 ,5 ] x 무한 = 5번
         // 2번 수포자 : [ 2, 1, 2, 3, 2, 4, 2, 5 ] x 무한 = 8번

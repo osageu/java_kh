@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 
-class skillTree {
+class SkillTree {
     public int solution(String skill, String[] skill_trees) {
         int answer = 0;
         StringBuilder sb = new StringBuilder();
